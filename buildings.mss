@@ -10,20 +10,22 @@
 
 #buildings {
   [zoom >= 13] {
-    [building != 'roof'] {
+    //[building != 'roof'] {
       polygon-fill: @building-low-zoom;
-    }
+    //}
     [building = 'roof'] {
-      polygon-pattern-file: url('symbols/building_roof_dark.png');
+      //polygon-pattern-file: url('symbols/building_roof_dark.png');
+      line-dasharray: 4,4;
     }
     polygon-clip: false;
     [zoom >= 15] {
       line-color: @building-line;
-      [building != 'roof'] {
+      //[building != 'roof'] {
         polygon-fill: @building-fill;
-      }
+      //}
       [building = 'roof'] {
-        polygon-pattern-file: url('symbols/building_roof.png');
+        //polygon-pattern-file: url('symbols/building_roof.png');
+        line-dasharray: 4,4;
       }
       line-width: .75;
       line-clip: false;
